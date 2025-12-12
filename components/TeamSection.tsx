@@ -70,6 +70,27 @@ export function TeamSection({
       expertise: ["AI Strategy", "Finance", "Compliance"],
       bio: "FCA and national speaker on AI applications in finance and compliance.",
     },
+    {
+      id: "7",
+      name: "CA Kumar Venkatesh",
+      role: "AI Hackathon Winner & Audit Expert",
+      expertise: ["Audit", "AI Innovation", "Hackathon Winner"],
+      bio: "AI hackathon winner and audit expert specializing in innovative audit solutions.",
+    },
+    {
+      id: "8",
+      name: "CA Mamta Kothari",
+      role: "Insolvency Expert & AI Faculty",
+      expertise: ["Insolvency", "AI Faculty", "Corporate Restructuring"],
+      bio: "Insolvency expert and AI faculty member with expertise in corporate restructuring and AI applications.",
+    },
+    {
+      id: "9",
+      name: "CA Vinit Kohli",
+      role: "Well Known Faculty & Life Coach",
+      expertise: ["Faculty", "Life Coaching", "Professional Development"],
+      bio: "Well known faculty member and life coach dedicated to professional development and growth.",
+    },
   ];
 
   const displayMembers = members.length > 0 ? members : defaultMembers;
