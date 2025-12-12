@@ -2,9 +2,8 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
-import { useResponsive } from "@/hooks/useResponsive";
 import { Section } from "./Section";
-import { InstructorCard } from "./InstructorCard";
+import { ExpertCarousel } from "./ExpertCarousel";
 
 export interface TeamMember {
   id: string;
@@ -25,8 +24,6 @@ export function TeamSection({
   members = [],
   className,
 }: TeamSectionProps) {
-  const { isMobile, isTablet } = useResponsive();
-
   const defaultMembers: TeamMember[] = [
     {
       id: "1",
@@ -102,20 +99,11 @@ export function TeamSection({
       description="A team of Chartered Accountants and AI specialists dedicated to building trust-first AI systems for finance, compliance, and governance."
       className={cn("bg-background-secondary", className)}
     >
-      <div
-        className={cn(
-          "grid gap-6",
-          isMobile
-            ? "grid-cols-1"
-            : isTablet
-            ? "grid-cols-2"
-            : "grid-cols-3 lg:grid-cols-4"
-        )}
-      >
-        {displayMembers.map((member) => (
-          <InstructorCard key={member.id} instructor={member} />
-        ))}
-      </div>
+      <ExpertCarousel
+        experts={displayMembers}
+        autoRotate={true}
+        rotationInterval={3000}
+      />
     </Section>
   );
 }
