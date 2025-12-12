@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/Button";
 
 export default function Error({
@@ -28,9 +29,11 @@ export default function Error({
           <Button onClick={reset} variant="gradient">
             Try again
           </Button>
-          <Button href="/" variant="ghost">
-            Go home
-          </Button>
+          <Link href="/">
+            <Button variant="ghost">
+              Go home
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
