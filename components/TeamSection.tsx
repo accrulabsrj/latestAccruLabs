@@ -31,6 +31,7 @@ export function TeamSection({
       role: "AI Governance Expert",
       expertise: ["AI Governance", "Compliance", "Risk Management"],
       bio: "Leading expert in AI governance and compliance frameworks for finance professionals.",
+      photo: "/images/team/ranjan-singhal.jpg",
     },
     {
       id: "2",
